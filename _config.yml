@@ -7,7 +7,7 @@
 
 # Site settings
 title: Anon's Programming Book
-moto: May code also cures you.
+moto: May code also cure you.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://emous.github.io" # the base hostname & protocol for your site
 owner: Anon
@@ -55,7 +55,8 @@ kramdown:
 category_dir: category/
 tag_dir: tag/
 
-# excerpt
+# 摘要显示分隔符
+# excerpt 
 excerpt_separator: "\n\n\n\n"
 
 # paginate
