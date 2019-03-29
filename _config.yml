@@ -18,6 +18,7 @@ permalink: /:year/:month/:day/:title/
 email: devtsai@outlook.com
 blogger_username: caihuashuai
 github_username:  emous
+stackoverflow_href: https://stackoverflow.com/users/9212741/anon
 
 twitter_username: 
 facebook_username: 
@@ -62,9 +63,5 @@ excerpt_separator: "\n\n\n\n"
 # paginate
 plugins: 
   - jekyll-paginate
-  - jekyll-feed
   
 paginate: 6
-
-feed:
-  path: atom.xml
