@@ -6,24 +6,27 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: HyG
-brief-intro: Front-end Dev Engineer
+title: Anon's Programming Book
+moto: May code also cures you.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gaohaoyang.github.io" # the base hostname & protocol for your site
+url: "https://emous.github.io" # the base hostname & protocol for your site
+owner: Anon
 
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: gaohaoyang126
-facebook_username: gaohaoyang.water
-github_username:  Gaohaoyang
-email: gaohaoyang126@126.com
-weibo_username: 3115521wh
-zhihu_username: gaohaoyang
-linkedIn_username: gaohaoyang
+email: devtsai@outlook.com
+blogger_username: caihuashuai
+github_username:  emous
+
+twitter_username: 
+facebook_username: 
+weibo_username: 
+zhihu_username: 
+linkedIn_username: 
 dribbble_username:
 
-description_footer: 本站记录我前端之旅的沿途风景！
+description_footer: Feed & star me if you like the site.
 
 # comments
 # two ways to comment, only choose one, and use your own short name
@@ -56,5 +59,11 @@ tag_dir: tag/
 excerpt_separator: "\n\n\n\n"
 
 # paginate
-plugins: [jekyll-paginate]
+plugins: 
+  - jekyll-paginate
+  - jekyll-feed
+  
 paginate: 6
+
+feed:
+  path: atom.xml
