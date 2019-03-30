@@ -33,6 +33,8 @@ layout: default
         <article itemscope itemtype="http://schema.org/BlogPosting">
         {{content}}
         </article>
+        <br>
+        {% include copyright.html %}
         <hr>
 
         {% assign hasSimilar = '' %}
@@ -42,15 +44,14 @@ layout: default
                 {% for thisTag in page.tags %}
                     {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
                         {% if hasSimilar.size == 0 %}
-                        <h2 id="similar_posts">Similar Posts</h2>
+                        <h2 id="similar_posts">相关文章</h2>
                         <ul>
                         {% endif %}
                         <li class="relatedPost">
-                            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-                            {% if post.series %}
-                                (Series: {{ post.series }})
+                            <strong> {{post.date | date: "%Y-%m-%d"}}: <a href="{{ site.baseurl }}{{ post.url }}" style="text-decoration:underline;margin-left:1em;">{{ post.title }}</a></strong>
+                            {% if post.description %}
+                                {{"> "| append:post.description | markdownify}}
                             {% endif %}
-                            </a>
                         </li>
                         {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
                         {% assign postHasSimilar = true %}
@@ -61,13 +62,11 @@ layout: default
         {% if hasSimilar.size > 0 %}
             </ul>
         {% endif %}
-        
-        {% include copyright.html %}
         <hr>
 
         {% include previousAndNext.html %}
 
-        <h2 id="comments">Comments</h2>
+        <h2 id="comments">评论</h2>
         {% include comments.html %}
 
 
