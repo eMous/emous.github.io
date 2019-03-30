@@ -8,8 +8,37 @@
                     {{ site.owner }}
                 {% endif %}
             </li>
-            <li>发表日期： <abbr title="2019-03-25T21:07:27+08:00">2019年3月25日</abbr></li>
+            {% assign pageVar = page %}
+            {% if post %} {% assign pageVar = post %} {% endif %}
+            <li>发表日期： <abbr title="{{pageVar.date | date_to_xmlschema}}">
+                {{pageVar.date |  date: "%Y-%m-%d" }}
+               </abbr></li>
             <li>版权声明：自由转载-非商用-非衍生-保持署名（<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">创意共享3.0许可证</a>）</li>
         </ul>
 </div>
-<hr>
+<style type="text/css">
+    .copyright{
+            margin-top:1em;
+            padding:1em;
+            border:1px solid #d3d3d3;
+            background-color:#DEEBF7;
+        }
+        
+        .copyright h4{
+            margin-top: 2px;
+            border-bottom:1px solid gray;
+            font-size:1.5em;
+            font-weight:bold;
+            color:#556677;
+        }
+        
+        .copyright ul{
+            padding-left:2em;
+            padding-right:2em;
+        }
+        
+        .copyright li{
+            color:#556677;
+        }
+</style>
+    
