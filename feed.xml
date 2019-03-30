@@ -8,6 +8,7 @@ layout: null
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <description>{{ site.description | xml_escape }}</description>
     <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <atom:link rel="hub" href="http://pubsubhubbub.appspot.com"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
@@ -15,7 +16,7 @@ layout: null
       <item>
         <title>{{ post.title | xml_escape }}</title>
         {% capture copyright %} {% include copyright.html %} {% endcapture %}
-        {% capture content %} {{ post.content | append:{{copyright}} }} {% endcapture %}
+        {% capture content %} {{ post.content | append: copyright }} {% endcapture %}
         <description>{{ content | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
