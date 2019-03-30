@@ -57,12 +57,14 @@ kramdown:
 category_dir: category/
 tag_dir: tag/
 
+
 # 摘要显示分隔符
 # excerpt 
-excerpt_separator: "\n\n\n\n"
+excerpt_separator: "\n___"
+
+
 
 # paginate
 plugins: 
   - jekyll-paginate
-  
 paginate: 6

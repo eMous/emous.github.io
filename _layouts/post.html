@@ -62,6 +62,22 @@ layout: default
             </ul>
         {% endif %}
 
+        <div class="copyright">
+                <h4>文档信息</h4>
+                <ul>
+                    <li>作者: 
+                        {% if page.author %}
+                            {{page.author}}
+                        {% else %}
+                            {{ site.owner }}
+                        {% endif %}
+                    </li>
+                    <li>发表日期： <abbr title="2019-03-25T21:07:27+08:00">2019年3月25日</abbr></li>
+                    <li>版权声明：自由转载-非商用-非衍生-保持署名（<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">创意共享3.0许可证</a>）</li>
+                </ul>
+        </div>
+        <hr>
+
         {% include previousAndNext.html %}
 
         <h2 id="comments">Comments</h2>

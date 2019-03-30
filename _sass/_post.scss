@@ -58,6 +58,30 @@
         //     }
         // }
     }
+    .copyright{
+        margin-top:1em;
+        padding:1em;
+        border:1px solid #d3d3d3;
+        background-color:#DEEBF7;
+      }
+      
+      .copyright h4{
+        margin-top: 2px;
+        border-bottom:1px solid gray;
+        font-size:1.5em;
+        font-weight:bold;
+        color:#556677;
+      }
+      
+      .copyright ul{
+        padding-left:2em;
+        padding-right:2em;
+      }
+      
+      .copyright li{
+        color:#556677;
+      }
+      
 }
 @media screen and (max-width: 770px) {
     .page[post] {
