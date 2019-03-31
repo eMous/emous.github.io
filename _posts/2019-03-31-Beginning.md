@@ -92,7 +92,7 @@ Github Page支持将用户提交的post自动处理成静态页面，这就意�
 
 最后将提示: `Install MSYS2 and MINGW development toolchain succeeded`
 
-### 安装Jekyll 
+#### 安装Jekyll 
 进入任何一个你想安装博客的文件夹（这会是最终项目目录的父文件夹），`Shift+右键打开Powershell`输入:
 ```powershell
 gem install jekyll bundler
