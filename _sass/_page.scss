@@ -243,3 +243,28 @@
         }
     }
 }
+
+
+//////////////////////////table style and adapts the size//////////////////////////////
+table {
+    // width: 100%;
+    // max-width: 65em;
+    border: 1px solid #d3d3d3;
+    box-shadow: 2px 2px 2px #7c7c7c;
+    margin: 15px auto;
+}
+table th,
+table td {
+  height: 35px; 
+  border: 1px solid #dedede; 
+  text-align: center !important; 
+}
+table th {
+    background: rgba(103, 252, 249, 0.158); 
+}
+table tr:nth-child(1), table:nth-child(1) {
+    white-space: nowrap; 
+}
+.table-area {
+    overflow: auto;
+}
