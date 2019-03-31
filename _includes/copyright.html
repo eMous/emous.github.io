@@ -7,6 +7,12 @@
                 {% else %}
                     {{ site.owner }}
                 {% endif %}
+                
+                {% if page.email %}
+                <a href="mailto:{{page.email}}" title="{{page.email}}"><i class="far fa-envelope-open" aria-hidden="true"></i></a> 
+                {% else %}
+                <a href="mailto:{{site.email}}" title="{{site.email}}"><i class="far fa-envelope-open" aria-hidden="true"></i></a> 
+                {% endif %} 
             </li>
             {% assign pageVar = page %}
             {% if post %} {% assign pageVar = post %} {% endif %}
@@ -14,6 +20,7 @@
                 {{pageVar.date |  date: "%Y-%m-%d" }}
                </abbr></li>
             <li>版权声明：自由转载-非商用-非衍生-保持署名（<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">创意共享3.0许可证</a>）</li>
+            <li>若文章中存在事实上的错误，欢迎评论或与作者联系。</li>
         </ul>
 </div>
 <style type="text/css">

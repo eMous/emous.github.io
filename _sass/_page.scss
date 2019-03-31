@@ -141,6 +141,14 @@
             }
         }
     }
+
+    img{
+        background: rgb(240, 240, 240);
+        border: 1px solid #d3d3d3;
+        border-radius:10px;
+        box-shadow: 3px 3px 3px #7c7c7c;
+        margin: 15px 0px 15px;
+    } 
 }
 @media screen and (max-width:1200px) and (min-width: 770px) {
     .page {
