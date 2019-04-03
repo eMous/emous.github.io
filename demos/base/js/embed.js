@@ -15,12 +15,12 @@ var embeded_js = embeded_js || (function () {
                 el.classList.remove("active");
                 console.log(el.tagName);
             });
-            [].forEach.call(active_eles, function (el) {
-                console.log(el.tagName);
-            });
+            // [].forEach.call(active_eles, function (el) {
+            //     console.log(el.tagName);
+            // });
             // Make the ATag and its parent li active.
             _this.classList.add("active");
-            _this.parentElement.classList.add("active");
+            _this.parentElement.parentElement.classList.add("active");
 
             // Remove ALL show class label.
             Array.prototype.forEach.call(show_eles, function (el) {
