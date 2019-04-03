@@ -68,3 +68,17 @@ excerpt_separator: "\n___"
 plugins: 
   - jekyll-paginate
 paginate: 6
+
+
+demos:
+  page_id: kksds
+  # error occurs: true -> alert() , false -> console.log()
+  debug: true
+
+  # default setting 
+  file_suffix:
+    ignore_cap: true
+    suffix_pattern:
+      html: ["html","htm"]
+      js: ["js"]
+      css: ["css"]

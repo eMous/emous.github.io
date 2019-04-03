@@ -1,0 +1,18 @@
+demoBaseUrl: /demos/
+
+
+demos:
+  - id: 89798dasoid
+    description: this demo's description
+    date: 2019-04-01
+    url: 2019/04/01/CSS_Style_demo/
+    categories: xxxxxx
+    tags: ssss
+    trace_posts: [kkuErVeJTCfn]
+  - id: ssdioom1
+    description: this demo's description
+    date: 2019-04-01 
+    url: 2019/04/01/Other_demo/
+    categories: xxxxxx
+    tags: ssss
+    trace_posts: [kkuErVeJTCfn]

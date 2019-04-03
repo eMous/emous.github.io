@@ -1,0 +1,26 @@
+---
+layout: null
+id: kksds
+permalink: /demos/base/list_demos.html
+---
+
+{% comment %} Try to list all demo files' detail paths. {% endcomment %}
+
+{% assign baseUrl = site.data.demoConf.demoBaseUrl %}
+{% assign demos = site.data.demoConf.demos %}
+{% assign final_array = "" | split: "" %}
+
+{% for member in site.static_files %}
+    {% assign fileSize = member.path | size %}
+        {% for demo in demos %}
+            {% assign demoPath = demo.url | prepend: baseUrl %}
+            {% assign splited = member.path | split: demoPath  %}
+            {%if splited.last != member.path%}
+                {% assign path_array = member.path | append: "|" | split: "|" %}
+                {% assign final_array = path_array | concat: final_array %}
+            {% endif %}
+        {% endfor %}
+{% endfor %}
+
+{{final_array|jsonify}}
+

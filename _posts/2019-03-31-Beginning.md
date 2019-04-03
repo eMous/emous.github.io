@@ -1,15 +1,71 @@
 ---
+id: kkuErVeJTCfn
 layout: post
 title: 使用Jekyll创建Github Page博客
 date: 2019-03-31
 categories: Jeykll
 tags: Liquid RSS Gem Jeykll YAML
 description: 万事开头难，这里记录了本站是如何被搭建起来的。
+showDemo: true
+mathjax: true
 ---
 
 
 * content
 {:toc}
+
+<script>demo_js.EmbedDemo("89798dasoid")</script>
+<script type="text/javascript">
+    setTimeout(function(){
+        // debugger;
+        console.log(script_here);
+                var currentSlug, iframe, listeners, setHeight, target, uid, uriEmbedded, uriOriginal, uriOriginalNoProtocol;
+        uid = "JSREMB_" + (~~(new Date().getTime() / 86400000));
+        uriOriginal = "//jsrun.net/DVkKp/embed/all/light/";
+        uriEmbedded = "//jsrun.net/DVkKp/embedded/all/light/";
+        currentSlug = "DVkKp";
+        uriOriginalNoProtocol = uriOriginal.split("//").pop();
+        target = script_here
+        iframe = document.createElement("iframe");
+        iframe.src = uriEmbedded;
+        iframe.id = uid;
+        iframe.width = "100%";
+        iframe.height = "0";
+        iframe.frameBorder = "0";
+        iframe.allowtransparency = true;
+        iframe.sandbox = "allow-modals allow-forms allow-popups allow-scripts allow-same-origin";
+        target.parentNode.insertBefore(iframe, target.nextSibling != null ? target.nextSibling : target);
+        setHeight = function (data) {
+            if (data.slug === currentSlug) {
+                return iframe.height = data.height + 50;
+            }
+        };
+        listeners = (function (_this) {
+            return function (event) {
+                var data, eventName;
+                eventName = event.data[0];
+                data = event.data[1];
+                switch (eventName) {
+                    case "embed":
+                        return setHeight(data);
+                    case "resultsFrame":
+                        if (data.height == 0) {
+                            data.height = 500;
+                        }
+                        return setHeight(data);
+                }
+            };
+        })(this); return window.addEventListener("message", listeners, false);
+    }, 100);
+            var script_here = document.currentScript;
+        console.log(document.currentScript);
+
+</script>
+<script async src="//jsrun.net/L2pKp/embed/all/light/"></script>
+<script async src="//jsrun.net/cPpKp/embed/all/light/"></script>
+<script async src="//jsrun.net/LWKKp/embed/all/light/"></script>
+
+
 
 <center><img alt title src="/image/2019-03-31/building_website.svg"></center>
 
@@ -123,3 +179,4 @@ Jekyll和bundler安装完毕以后，可以通过Jekyll创建一个带有`minima
 5. 如果favicon变更了，发现页面的不论如何删除缓存都还是旧的，试试`Shift + Ctrl + R`。
 6. _posts里的文章必须形如`y-m-d-name`，如`2019-3-31`，否则将无法被识别。
 7. scss文件中如果出现UTF-8编码的中文无法通过本地的`jekyll b`。
+8. 对于一个带有Front Matters的页面，如果它不在Collection中(包括include、post)。那么，其他页面通过Page.content获得它的内容将是Unrendered的并且无法手动Render。相反的，如果在Collection中，则可以获得到的是已经渲染过的。

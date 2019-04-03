@@ -1,0 +1,240 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="stylesheet" type="text/css" href="css/embed.css">
+    <script src="js/embed.js"></script>
+    <script type="text/javascript">
+        var height;
+        var force_height = null;
+        var slug = "DVkKp";
+        var show_src = "//jsrun.cn/DVkKp/result/light/";
+        var resize_element_counter = 0;
+        var shell_edit_url = '/DVkKp/light/';
+    </script>
+    <style type="text/css">
+        :root #content>#right>.dose>.dosesingle,
+        :root #content>#center>.dose>.dosesingle,
+        :root #header+#content>#left>#rlblock_left,
+        :root .adsbygoogle,
+        :root .tooltip>#tp,
+        :root #wrapper>div[style="padding:3px;"]>#pic,
+        :root .content>a>.topline,
+        :root .container>a.mid-wrapper {
+            display: none !important;
+        }
+    </style>
+
+    <link href="//code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400'" rel="stylesheet" type="text/css">
+
+    <style type="text/css" media="screen">
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="actions">
+                <ul class="nav">
+                    <li class="active dropdown">
+                        <a data-trigger-type="result" href="#Result">Result</a>
+                        <div class="dropdown-content">
+                            <a>1</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a data-trigger-type="js" href="#JavaScript">JavaScript</a>
+                        <div class="dropdown-content">
+                            <a>1</a>
+                            <a>2</a>
+                            <a>3</a>
+                            <a>4</a>
+                            <a>5</a>
+                            <a>6</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a data-trigger-type="html" href="#HTML">HTML</a>
+                        <div class="dropdown-content">
+                            <a>1</a>
+                            <a>2</a>
+                            <a>3</a>
+                            <a>4</a>
+                            <a>5</a>
+                            <a>6</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a data-trigger-type="css" href="#CSS">CSS</a>
+                        <div class="dropdown-content">
+                            <a>1</a>
+                            <a>2</a>
+                            <a>3</a>
+                            <a>4</a>
+                            <a>5</a>
+                            <a>6</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a data-trigger-type="css" href="#Others">Others</a>
+                        <div class="dropdown-content">
+                            <a>1</a>
+                            <a>2</a>
+                            <a>3</a>
+                            <a>4</a>
+                            <a>5</a>
+                            <a>6</a>
+                        </div>
+                    </li>
+                    <li id="label">
+                        Anon's code viewer
+                    </li>
+                </ul>
+                <!-- <div class="hl animated" style="left: 0px; width: 59.025px;"></div> -->
+            </div>
+        </header>
+
+        <div id="viewerContainer">
+            <div class="result viewer show" id="result">
+                <!-- <iframe id="result_iframe" src="/demos/2019/04/01/CSS_Style_demo/test.html" frameborder="0"
+                    scrolling="auto"
+                    sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe> -->
+            </div>
+            <!-- <div id="traceBox">
+                <div class="head">
+                    <span>console 命令行工具</span>
+                    <b id="closeConsole">X</b>
+                    <b id="clearConsole">clear</b>
+                </div>
+                <div class="bd" id="consoleBox">
+                    <pre id="consoleLog" class="hljs"></pre>
+                    <div class="input">
+                        <div style="color: #359cf4;font-weight: bold;">&gt;</div>
+                        <textarea id="taInput"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="showTraceBox">console</div>
+            <pre class="tCont hljs javascript"><span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">argument</span>) </span>{
+
+	<span class="hljs-built_in">window</span>.requestAnimFrame = (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">return</span> <span class="hljs-built_in">window</span>.requestAnimationFrame ||
+			<span class="hljs-built_in">window</span>.webkitRequestAnimationFrame ||
+			<span class="hljs-built_in">window</span>.mozRequestAnimationFrame ||
+			<span class="hljs-built_in">window</span>.oRequestAnimationFrame ||
+			<span class="hljs-built_in">window</span>.msRequestAnimationFrame ||
+			<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">callback</span>) </span>{
+				<span class="hljs-built_in">window</span>.setTimeout(callback, <span class="hljs-number">1000</span> / <span class="hljs-number">60</span>);
+			};
+	})();
+
+	<span class="hljs-keyword">var</span> canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'c'</span>);
+	canvas.width = <span class="hljs-built_in">window</span>.innerWidth;
+	canvas.height = <span class="hljs-built_in">window</span>.innerHeight * <span class="hljs-number">0.75</span>;
+
+	<span class="hljs-keyword">var</span> c = canvas.getContext(<span class="hljs-string">'2d'</span>),
+		w = canvas.width,
+		h = canvas.height;
+
+	<span class="hljs-keyword">var</span> rain_number = <span class="hljs-number">1000</span>,
+		rain_array = [];
+
+	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Rain</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">this</span>.x = <span class="hljs-built_in">Math</span>.random() * w;
+		<span class="hljs-keyword">this</span>.y = <span class="hljs-built_in">Math</span>.random() * h;
+		<span class="hljs-keyword">this</span>.vector_x = <span class="hljs-built_in">Math</span>.random() - <span class="hljs-number">0.5</span> &gt; <span class="hljs-number">0</span> ? <span class="hljs-built_in">Math</span>.random() : -<span class="hljs-built_in">Math</span>.random();
+		<span class="hljs-keyword">this</span>.vector_y = <span class="hljs-built_in">Math</span>.random() / <span class="hljs-number">1.5</span>;
+		<span class="hljs-keyword">this</span>.line_length = <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">5</span> + <span class="hljs-number">20</span>;
+	}
+
+	Rain.prototype.update = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">this</span>.x += <span class="hljs-keyword">this</span>.vector_x;
+		<span class="hljs-keyword">this</span>.y += <span class="hljs-keyword">this</span>.vector_y * <span class="hljs-keyword">this</span>.line_length;
+
+		<span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.x &gt; w || <span class="hljs-keyword">this</span>.x &lt; <span class="hljs-number">0</span>) {
+			<span class="hljs-keyword">this</span>.x = <span class="hljs-built_in">Math</span>.random() * w;
+		}
+		<span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.y &gt; h) {
+			<span class="hljs-keyword">this</span>.y = <span class="hljs-number">0</span>;
+		}
+	}
+
+	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
+		c.strokeStyle = <span class="hljs-string">'snow'</span>;
+		c.fillStyle = <span class="hljs-string">'white'</span>;
+		c.lineWidth = <span class="hljs-number">1</span>;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; rain_number; i++) {
+			rain_array.push(<span class="hljs-keyword">new</span> Rain())
+		}
+	}
+
+	init();
+	start();
+
+	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{
+		c.fillStyle = <span class="hljs-string">"rgba(0,0,0,0.5)"</span>;
+		c.fillRect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, w, h);
+
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; rain_array.length; i++) {
+			c.beginPath();
+			c.moveTo(rain_array[i].x, rain_array[i].y);
+			c.lineTo(rain_array[i].x + rain_array[i].vector_x, rain_array[i].y + rain_array[i].vector_y * rain_array[i].line_length);
+
+			rain_array[i].update();
+			c.stroke();
+		}
+		c.closePath();
+
+		<span class="hljs-built_in">window</span>.requestAnimFrame(start);
+	}
+
+	<span class="hljs-built_in">window</span>.onresize = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+}</pre>
+            <pre class="tCont hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mirrow"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+            <pre class="tCont hljs scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">"compass/css3"</span>;
+<span class="hljs-variable">$w</span>: <span class="hljs-number">100vw</span>;
+<span class="hljs-variable">$h</span>: <span class="hljs-number">100vh</span>;
+
+* {
+	<span class="hljs-attribute">margin</span>: <span class="hljs-number">0px</span>;
+	<span class="hljs-attribute">padding</span>: <span class="hljs-number">0px</span>;
+}
+
+<span class="hljs-selector-tag">body</span>{
+	<span class="hljs-attribute">background-color</span>: black;
+	<span class="hljs-attribute">overflow</span>: hidden;
+	<span class="hljs-selector-tag">canvas</span>{
+	}
+	
+	<span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.mirrow</span>{
+		-webkit-box-reflect:below -<span class="hljs-number">5px</span> -webkit-linear-gradient(transparent, rgba(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.4</span>));
+	}
+}</pre>
+        </div> -->
+        </div>
+        <!-- <script>doNotCheckHref = true;
+        window.addEventListener('load', function () {
+            //                        EmbedManager.loadResult();
+            document.querySelector("#actions li a").click();
+        }, false);
+    </script>
+    <div style="display: none">
+        <script
+            type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1261859344'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1261859344' type='text/javascript'%3E%3C/script%3E"));</script>
+        <span id="cnzz_stat_icon_1261859344"></span>
+        <script src=" http://s4.cnzz.com/stat.php?id=1261859344" type="text/javascript"></script>
+    </div> -->
+
+
+</body>
+
+</html>
