@@ -14,10 +14,8 @@ mathjax: true
 * content
 {:toc}
 
-<script>demo_js.EmbedDemo("89798dasoid")</script>
 
-
-
+<!-- 这是我的第一个代码显示脚本 -- <script>demo_js.EmbedDemo("89798dasoid")</script> -->
 
 <center><img alt title src="/image/2019-03-31/building_website.svg"></center>
 
