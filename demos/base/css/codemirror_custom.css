@@ -1,0 +1,7 @@
+body{margin: auto;}
+.CodeMirror {
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    height: 100%;
+    font-size: 0.9rem;
+}

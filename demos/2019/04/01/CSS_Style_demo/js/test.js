@@ -1,73 +1,84 @@
-'use strict';
-(() => {
-    const c = document.getElementById('c');
-    const ctx = c.getContext('2d');
-    const w = c.width = window.innerWidth;
-    const h = c.height = window.innerHeight;
-    const cx = w / 2;
-    const cy = h / 2;
-    const create3Points = (o, l) => {
-        const a = (Math.PI * 2) / 3;
-        const p = [];
+var PI2 = Math.PI * 2;
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext("2d");
+var circles = []
+var mouse = {
+    x: Math.random() * window.innerWidth,
+    y: Math.random() * window.innerHeight
+};
+var options = {
+    totalCircles: 10,
+    maxRadius: 300,
+    maxLineWidth: 150,
+    colors: ["#105187", "#2C8693", "#F19722", "#C33325"]
+};
 
-        for (let i = Math.PI / 2; i < (Math.PI * 2 + Math.PI / 2); i += a) {
-            p.push({
-                x: o.x + Math.cos(-i) * l,
-                y: o.y + Math.sin(-i) * l,
-            });
-        }
+function init() {
+    onWindowResize();
+    window.addEventListener("resize", onWindowResize, false);
+    document.body.addEventListener("mousemove", onMouseMove, false);
+    document.body.addEventListener("touchmove", onTouchMove, false);
+    for (var i = 0; i < options.totalCircles; i++) circles.push(new Circle());
+}
 
-        return p;
+function onTouchMove(event) {
+    var touch = event.touches[0];
+    mouse = {
+        x: touch.clientX,
+        y: touch.clientY
     };
-    const draw = (ctx, p1, p2, d) => {
-        const dx = p2.x - p1.x;
-        const dy = p2.y - p1.y;
-        const dd = Math.sqrt(dx * dx + dy * dy);
-        const slice = dd / 3;
-        const aa = Math.atan2(dy, dx);
-        const a = {
-            x: p1.x + Math.cos(aa) * slice,
-            y: p1.y + Math.sin(aa) * slice,
-        };
-        const b = {
-            x: a.x + Math.cos(aa - Math.PI / 3) * slice,
-            y: a.y + Math.sin(aa - Math.PI / 3) * slice,
-        };
-        const c = {
-            x: a.x + Math.cos(aa) * slice,
-            y: a.y + Math.sin(aa) * slice,
-        };
+}
 
-        if (d === 0) {
-            ctx.strokeStyle = 'white';
-            ctx.fillStyle = 'white';
-            ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.lineTo(c.x, c.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.closePath();
-            ctx.stroke();
-            ctx.fill();
-
-
-            return;
-        }
-
-        draw(ctx, p1, a, d - 1);
-        draw(ctx, a, b, d - 1);
-        draw(ctx, b, c, d - 1);
-        draw(ctx, c, p2, d - 1);
+function onMouseMove(event) {
+    mouse = {
+        x: event.clientX,
+        y: event.clientY
     };
+}
 
-    const points = create3Points({x: cx, y: cy}, h * 0.5).map((pt) => {
-        return { x: pt.x, y: pt.y + h * 0.1 };
-    });
 
-    const [p1, p2, p3] = points;
+function onWindowResize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
 
-    draw(ctx, p1, p2, 4);
-    draw(ctx, p2, p3, 4);
-    draw(ctx, p3, p1, 4);
-})();
+function animate() {
+    requestAnimationFrame(animate);
+    render();
+}
+
+function render() {
+    time = new Date().getTime() * 0.001;
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    for (var i = 0; i < circles.length; i++) circles[i].draw(context);
+}
+
+var Circle = function(args) {
+    if (args === undefined) var args = {};
+    this.radius = args.radius || (Math.random() * options.maxRadius) + 10;
+    this.lineWidth = args.lineWidth || Math.random() * options.maxLineWidth;
+    this.color = args.color || options.colors[Math.floor(Math.random() * options.colors.length)];
+    this.delay = Math.random() * 100 + 4;
+    this.center = {
+        x: canvas.width / 2,
+        y: canvas.height / 2
+    };
+    this.draw = function(ctx) {
+        this.center.x += (mouse.x - this.center.x) / this.delay;
+        this.center.y += (mouse.y - this.center.y) / this.delay;
+        var scale = Math.sin(time + this.lineWidth) - 0.5;
+        ctx.lineWidth = (Math.sin(time + this.lineWidth) + 1) * this.lineWidth;
+        ctx.save();
+        ctx.beginPath();
+        ctx.translate(this.center.x, this.center.y);
+        ctx.scale(scale, scale);
+        ctx.strokeStyle = this.color;
+        ctx.arc(0, 0, this.radius, 0, PI2, false);
+        ctx.stroke();
+        ctx.restore();
+    }
+    return this;
+}
+
+init();
+animate();

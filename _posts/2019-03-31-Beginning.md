@@ -15,55 +15,7 @@ mathjax: true
 {:toc}
 
 <script>demo_js.EmbedDemo("89798dasoid")</script>
-<script type="text/javascript">
-    setTimeout(function(){
-        // debugger;
-        console.log(script_here);
-                var currentSlug, iframe, listeners, setHeight, target, uid, uriEmbedded, uriOriginal, uriOriginalNoProtocol;
-        uid = "JSREMB_" + (~~(new Date().getTime() / 86400000));
-        uriOriginal = "//jsrun.net/DVkKp/embed/all/light/";
-        uriEmbedded = "//jsrun.net/DVkKp/embedded/all/light/";
-        currentSlug = "DVkKp";
-        uriOriginalNoProtocol = uriOriginal.split("//").pop();
-        target = script_here
-        iframe = document.createElement("iframe");
-        iframe.src = uriEmbedded;
-        iframe.id = uid;
-        iframe.width = "100%";
-        iframe.height = "0";
-        iframe.frameBorder = "0";
-        iframe.allowtransparency = true;
-        iframe.sandbox = "allow-modals allow-forms allow-popups allow-scripts allow-same-origin";
-        target.parentNode.insertBefore(iframe, target.nextSibling != null ? target.nextSibling : target);
-        setHeight = function (data) {
-            if (data.slug === currentSlug) {
-                return iframe.height = data.height + 50;
-            }
-        };
-        listeners = (function (_this) {
-            return function (event) {
-                var data, eventName;
-                eventName = event.data[0];
-                data = event.data[1];
-                switch (eventName) {
-                    case "embed":
-                        return setHeight(data);
-                    case "resultsFrame":
-                        if (data.height == 0) {
-                            data.height = 500;
-                        }
-                        return setHeight(data);
-                }
-            };
-        })(this); return window.addEventListener("message", listeners, false);
-    }, 100);
-            var script_here = document.currentScript;
-        console.log(document.currentScript);
 
-</script>
-<script async src="//jsrun.net/L2pKp/embed/all/light/"></script>
-<script async src="//jsrun.net/cPpKp/embed/all/light/"></script>
-<script async src="//jsrun.net/LWKKp/embed/all/light/"></script>
 
 
 

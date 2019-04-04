@@ -108,7 +108,7 @@ var embeded_js = embeded_js || (function () {
         // Method is hooked when the iframe onLoad
         hook: function () {
             var _this = this;
-            // Base result iframe height equals embed iframe height - header height(50px) 
+            // Base result iframe height equals embed iframe height - header height(50px)
             (function initResultiframesize() {
                 return;
                 var result_iframe = document.querySelector("#result_iframe");
@@ -206,7 +206,7 @@ var embeded_js = embeded_js || (function () {
                 }
                 // Result dropdown_content.
                 if (html_files.length == 0) {
-                    // Means that there is no result page. 
+                    // Means that there is no result page.
                     a_li_result.classList.remove("active");
                     a_li_js.classList.add("active");
 
