@@ -10,7 +10,6 @@ var mirrorcode_ctrl_js = mirrorcode_ctrl_js || (function(){
         hook: function (file_url,mime_type) {
             var _this = this;
             (function createEditor(mime_type) {
-                console.log(mime_type);
                 var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
                     lineNumbers: true,
                     matchBrackets: true,
