@@ -4,7 +4,7 @@ body{
 }
 #wrapper{
     /* position: relative; */
-    background: red;
+    /*background: red;*/
 }
 
 header{
@@ -38,6 +38,9 @@ ul.nav{
     text-decoration: none;
     color:rgb(7, 40, 61);
     font-size: 0.9rem;
+}
+#actions{
+    display: none;
 }
 .active{
     border-bottom: .2rem solid #612c80;
@@ -78,11 +81,6 @@ ul.nav{
     background-color: #c9e1f0;.
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 #viewerContainer{
     width:100%;
 }
@@ -96,6 +94,7 @@ ul.nav{
 iframe{
     box-sizing: border-box;
     width: 100%;
+    display: none;
 }
 
 .show{
