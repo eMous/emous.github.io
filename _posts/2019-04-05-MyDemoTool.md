@@ -6,8 +6,6 @@ date: 2019-04-05
 categories: Jeykll
 tags: Jeykll Javascript tools homework
 description: 有了它，我就再也不用操心jsfiddle什么时候进GFWList了。
-showDemo: true
-mathjax: true
 ---
 
 
