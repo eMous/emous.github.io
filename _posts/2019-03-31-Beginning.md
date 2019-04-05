@@ -17,7 +17,7 @@ mathjax: true
 
 <!-- 这是我的第一个代码显示脚本 -- <script>demo_js.EmbedDemo("89798dasoid")</script> -->
 
-<center><img alt title src="/image/2019-03-31/building_website.svg"></center>
+<center><img alt title src="/image/2019/03/31/building_website.svg"></center>
 
 ## 这是一个开始
 
@@ -62,7 +62,7 @@ ___
 
 ## Jekyll
 
-<center><img alt title src="/image/2019-03-31/logo-2x.png"></center>
+<center><img alt title src="/image/2019/03/31/logo-2x.png"></center>
 
 使用Jekyll在Github Page上进行博客创作是Github官方推荐的Page的使用方式之一。
 
@@ -91,10 +91,10 @@ Github Page支持将用户提交的post自动处理成静态页面，这就意�
 进入[RubyInstaller下载页面](https://www.ruby-lang.org/en/downloads/)下载Installer **with Devkit**。
 
 勾选toolchain。
-<center><img alt title src="/image/2019-03-31/1554021299.jpg"></center>
+<center><img alt title src="/image/2019/03/31/1554021299.jpg"></center>
 
 安装完成后，Ruby将存放在C盘根目录，勾选“Run ridk install ……”并finishh，将弹出下图所示命令窗口，输入`3`并回车。
-<center><img alt title src="/image/2019-03-31/Snipaste_2019-03-31_16-39-33.png"></center>
+<center><img alt title src="/image/2019/03/31/Snipaste_2019-03-31_16-39-33.png"></center>
 
 最后将提示: `Install MSYS2 and MINGW development toolchain succeeded`
 
@@ -106,7 +106,7 @@ gem install jekyll bundler
 Jekyll和bundler安装完毕以后，可以通过Jekyll创建一个带有`minima`主题的博客。
 
 运行 `jeykll s`，再访问localhost:4000，你就能看到自己的博客了！
-<center><img alt title src="/image/2019-03-31/Snipaste_2019-03-31_17-21-34.png"></center>
+<center><img alt title src="/image/2019/03/31/Snipaste_2019-03-31_17-21-34.png"></center>
 
 再之后，你只需要在_posts文件夹中添加形如`y-m-d-name`格式的文件，即可实时浏览到你的新文章了。
 
