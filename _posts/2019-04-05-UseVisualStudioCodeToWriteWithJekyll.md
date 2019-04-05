@@ -18,6 +18,8 @@ description: 自动化这件事总是后知后觉的。
 
 这个试错的过程长短是因人而异的，至少对我来说，当我有意无意地察觉到我的问题解决过程存在模式之后。我便自然而然地想到工具，自动化方法，集成开发环境……
 
+___
+
 ## 一开始我是如何做的？
 
 最开始的时候，我使用的是[Sublime Text](https://en.wikipedia.org/wiki/Sublime_Text)编辑博客样式与博客内容，配合[Powershell](https://en.wikipedia.org/wiki/PowerShell)对Jekyll进行启停，通过Chrome浏览本地端地样式，最后使用[SourceTree](https://www.sourcetreeapp.com/)将Jekyll推到Github Page再最后预览一遍。

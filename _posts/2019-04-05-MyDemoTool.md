@@ -16,6 +16,8 @@ description: 有了它，我就再也不用操心jsfiddle什么时候进GFWList�
 
 Jekyll-demos 是一套纯粹使用Jekyll完成的用来展示你的前端页面（包括但不限于`html/js/css`）的解决方案。因为它不是基于Ruby编写，所以它称不上一款插件，这意味着你可以自由地在Github Page中使用它。
 
+___
+
 ## 起源
 
 最主要地原因是我准备写一篇博客展示刚从[w3school](https://www.w3schools.com)温习的CSS基础，并将demo的代码和效果一并展示出来。结果发现我认为样式最简洁明快且被广泛认可的[jsfiddle](jsfiddle.net)被墙了，更甚至的它一直都没有被[gfwlist](https://github.com/gfwlist/gfwlist)项目嗅探到，这意味着一个正常来自中国大陆地区的网民是无法通过直接或使用Shadowsocks Pac模式的方式预览到我提供的demo的，如果我一昧要使用它的话。而其他的embed服务，要么样式太复杂([codepen](http://codepen.io)),要么必须付费([jsbin](https://jsbin.com/),不得不说我很喜欢jsbin的体验甚至超过jsfiddle)。
