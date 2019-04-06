@@ -1,7 +1,7 @@
 var PI2 = Math.PI * 2;
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
-var circles = []
+var circles = [];
 var mouse = {
     x: Math.random() * window.innerWidth,
     y: Math.random() * window.innerHeight
@@ -76,9 +76,9 @@ var Circle = function(args) {
         ctx.arc(0, 0, this.radius, 0, PI2, false);
         ctx.stroke();
         ctx.restore();
-    }
+    };
     return this;
-}
+};
 
 init();
 animate();

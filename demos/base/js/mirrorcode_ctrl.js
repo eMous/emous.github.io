@@ -1,7 +1,7 @@
 var mirrorcode_ctrl_js = mirrorcode_ctrl_js || (function(){
     var _args = {
         editor:{}
-    }
+    };
     return {
         _args: _args,
         fileContentHook: function(file_url,content){
@@ -24,7 +24,7 @@ var mirrorcode_ctrl_js = mirrorcode_ctrl_js || (function(){
                     xmlHttp.onreadystatechange = function() {
                         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
                             _this.fileContentHook(file_url,xmlHttp.responseText);
-                    }
+                    };
                     xmlHttp.open("GET", file_url, true); // true for asynchronous
                     xmlHttp.send(null);
                 }(file_url))

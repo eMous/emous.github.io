@@ -5,13 +5,13 @@ var embeded_js = embeded_js || (function () {
             Array.from(dropdown_eles).forEach(function (el) {
                 el.addEventListener("mouseenter",function (event) {
                     el.querySelector(".dropdown-content").style.display = "block";
-                })
+                });
                 el.addEventListener("mouseleave",function (event) {
                     el.querySelector(".dropdown-content").style.display = "none";
                 })
             });
         }());
-    })
+    });
 
 
     var _args = {};
@@ -66,12 +66,12 @@ var embeded_js = embeded_js || (function () {
                     iframe.attachEvent("onload", function () {
                         iframe.height = iframe.contentWindow.document.documentElement.scrollHeight;
                     });
-                    return;
+
                 } else {
                     iframe.onload = function () {
                         iframe.height = iframe.contentDocument.body.scrollHeight;
                     };
-                    return;
+
                 }
             } catch (e) {
                 this._Log('Unable to get page height of ' + id);
@@ -121,7 +121,7 @@ var embeded_js = embeded_js || (function () {
             (function analyseDemoFiles() {
                 document.querySelector("#actions").style.display = "block";
 
-                var args = _this._args
+                var args = _this._args;
                 var html_files = args.this_demo_files.html;
                 var js_files = args.this_demo_files.js;
                 var css_files = args.this_demo_files.css;
@@ -136,7 +136,7 @@ var embeded_js = embeded_js || (function () {
                 var getFileName = function (str) {
                     var index = str.lastIndexOf("/");
                     return str.substr(index + 1);
-                }
+                };
                 var insertATagsToDropdownContent = function(a_li_dropdown_content,arr_files,kind){
                     var length = a_li_dropdown_content.children.length - arr_files.length;
                     // Dynamic add ATag.
@@ -159,7 +159,7 @@ var embeded_js = embeded_js || (function () {
                         var quota = "\"";
                         a_li_dropdown_content.children[i].setAttribute("onclick", "embeded_js.toggleFrameShow(" + "this" + "," + quota + kind + quota + "," + quota + arr_files[i] + quota + ")");
                     }
-                }
+                };
                 var createAnResultIframeToContainer = function (container, html_url) {
                     uriEmbedded = html_url;
                     iframe = document.createElement("iframe");
@@ -172,7 +172,7 @@ var embeded_js = embeded_js || (function () {
                     iframe.sandbox = "allow-modals allow-forms allow-popups allow-scripts allow-same-origin";
                     container.insertBefore(iframe, container.firstChild);
                     return iframe;
-                }
+                };
                 var createAnMirrorCodeIframeToContainer = function (container, file_url, file_suffix) {
                     uriEmbedded = "/demos/base/mirrorcode.html";
                     var iframe = document.createElement("iframe");
@@ -201,9 +201,9 @@ var embeded_js = embeded_js || (function () {
                             _this._Log("Something went wrong with file suffix: "+ file_suffix);
                         }
                         iframe.contentWindow.mirrorcode_ctrl_js.hook(file_url,mime_type)
-                    }
+                    };
                     return iframe;
-                }
+                };
                 // Result dropdown_content.
                 if (html_files.length == 0) {
                     // Means that there is no result page.
@@ -273,7 +273,7 @@ var embeded_js = embeded_js || (function () {
                         // Means that there is no result page and no js page.
                         a_li_others.classList.remove("active");
                         _this._Log("There is empty in the demo.");
-                        return;
+
                     }
                 }else{
                     var a_li_dropdown_content = a_li_others.getElementsByClassName("dropdown-content")[0];
@@ -290,4 +290,4 @@ var embeded_js = embeded_js || (function () {
             // console.log(JSON.stringify(s))
         }
     }
-}())
+}());

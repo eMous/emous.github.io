@@ -12,7 +12,7 @@ description: 自动化这件事总是后知后觉的。
 * content
 {:toc}
 
-<center><img style="height:400px;width:100%;" alt title src="/image/2019/04/05/make-up-brushes.svg"></center>
+<div style="text-align: center;"><img style="height:400px;width:100%;" alt title src="/image/2019/04/05/make-up-brushes.svg"></div>
 
 到今天，我才终于能体会到为什么[小甲鱼](https://fishc.com.cn/)总会在他的教程里告诫所有初学者使用[Notepad++](https://en.wikipedia.org/wiki/Notepad%2B%2B)进行编程。因为面对一个未知的事物，**如果你的第一反应就是寻找捷径，那这意味着你将缺失一大部分由试错构建起的对其的宏观的认知。** 当你有足够多的尝试，已把它的基本操作弄得明白后，才能对其构建起一个相对清晰的框架，对于之后发生问题可以才能有一个准确的描述。
 

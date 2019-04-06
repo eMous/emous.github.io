@@ -135,7 +135,7 @@
     }
   ];
 
-  contentInit(demoContent) //内容初始化
+  contentInit(demoContent); //内容初始化
   waitImgsLoad() //等待图片加载，并执行布局初始化
 }());
 
@@ -160,11 +160,11 @@ function contentInit(content) {
   //     htmlArr.push('</div>')
   // }
   // var htmlStr = htmlArr.join('')
-  var htmlStr = ''
+  var htmlStr = '';
   for (var i = 0; i < content.length; i++) {
     htmlStr += '<div class="grid-item">' + '   <a class="a-img" href="' + content[i].demo_link + '">' + '       <img src="' + content[i].img_link + '">' + '   </a>' + '   <h3 class="demo-title">' + '       <a href="' + content[i].demo_link + '">' + content[i].title + '</a>' + '   </h3>' + '   <p>主要技术：' + content[i].core_tech + '</p>' + '   <p>' + content[i].description + '       <a href="' + content[i].code_link + '">源代码 <i class="fa fa-code" aria-hidden="true"></i></a>' + '   </p>' + '</div>'
   }
-  var grid = document.querySelector('.grid')
+  var grid = document.querySelector('.grid');
   grid.insertAdjacentHTML('afterbegin', htmlStr)
 }
 
@@ -173,9 +173,9 @@ function contentInit(content) {
  * @return {[type]} [description]
  */
 function waitImgsLoad() {
-  var imgs = document.querySelectorAll('.grid img')
-  var totalImgs = imgs.length
-  var count = 0
+  var imgs = document.querySelectorAll('.grid img');
+  var totalImgs = imgs.length;
+  var count = 0;
   //console.log(imgs)
   for (var i = 0; i < totalImgs; i++) {
     if (imgs[i].complete) {
@@ -184,7 +184,7 @@ function waitImgsLoad() {
     } else {
       imgs[i].onload = function() {
         // alert('onload')
-        count++
+        count++;
         //console.log('onload' + count)
         if (count == totalImgs) {
           //console.log('onload---bbbbbbbb')
