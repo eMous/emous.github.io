@@ -49,7 +49,7 @@ code，鉴于他有优秀的extension生态，姑且把它当作车床模型；�
 
 : VS Code的Snippet是和文件类型强耦合的，意味着每个文件只能跑自己类型的Snippet。然而，Live template则完全不同，虽说Webstorm自己的File Types也是乱七八糟，自定义的File Types不如狗，只能沦为Live template的Others类。但是，在基本的功能上Live template是比Snippet强大且灵活的，**Webstorm提供Live template暴露给哪些语言（文件）类型的设置。** 这意味着，js文件可以使用twig[^1]类型的Live template，提供建议补全基本`Liquid`语句。
 
-<div style="text-align: center;"><img style="height:;width:100%;" alt="" title="" src="d://homework/emous.github.io/image/2019/04/06/Snipaste_2019-04-06_23-02-56.png"></div>
+<div style="text-align: center;"><img style="height:;width:100%;" alt="" title="" src="/image/2019/04/06/Snipaste_2019-04-06_23-02-56.png"></div>
 
 **Markdown Navigation Plugin配合Language Injection**
 
