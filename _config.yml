@@ -82,3 +82,5 @@ demos:
       html: ["html","htm"]
       js: ["js"]
       css: ["css"]
+
+exclude: [".idea/"]

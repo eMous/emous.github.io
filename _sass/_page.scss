@@ -149,7 +149,7 @@
         border: 1px solid #d3d3d3;
         box-shadow: 1px 1px 5px #7c7c7c;
         margin: 15px 0px 15px;
-    } 
+    }
 }
 @media screen and (max-width:1200px) and (min-width: 770px) {
     .page {
@@ -258,15 +258,15 @@ table {
 }
 table th,
 table td {
-  height: 35px; 
-  border: 1px solid #1f1f20; 
-  text-align: center !important; 
+  height: 35px;
+  border: 1px solid #1f1f20;
+  text-align: center !important;
 }
 table th {
-    background: rgba(17, 19, 19, 0.158); 
+    background: rgba(17, 19, 19, 0.158);
 }
 table tr:nth-child(1), table:nth-child(1) {
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 .table-area {
     overflow: auto;
