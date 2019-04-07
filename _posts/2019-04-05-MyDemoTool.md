@@ -1,10 +1,10 @@
 ---
 id: jlEBaFQCtltz
 layout: post
-title: 使用Jeykll-demos为你展示demo助力
+title: Jekyll-demos为你展示demo助力
 date: 2019-04-05
-categories: Jeykll
-tags: Jeykll Javascript tools homework
+categories: Jekyll
+tags: Jekyll Javascript tools homework
 description: 有了它，我就再也不用操心jsfiddle什么时候进GFWList了。
 ---
 

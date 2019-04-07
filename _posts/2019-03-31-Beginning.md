@@ -3,8 +3,8 @@ id: kkuErVeJTCfn
 layout: post
 title: 使用Jekyll创建Github Page博客
 date: 2019-03-31
-categories: Jeykll
-tags: Liquid RSS Gem Jeykll YAML
+categories: Jekyll
+tags: Liquid RSS Gem Jekyll YAML
 description: 万事开头难，这里记录了本站是如何被搭建起来的。
 ---
 
