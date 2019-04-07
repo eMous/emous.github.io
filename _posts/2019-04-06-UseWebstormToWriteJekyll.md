@@ -115,8 +115,7 @@ description: $description$
 
 * 如果你下载了Twig插件，你可能会发现在.Twig的文本中竟然没有任何补全信息。而且你在设置中找不到任何相关的信息，然而其他的所有文件（其实也并不是）都有补全，除了纯Text文件。这个时候，你或许要怀疑它的插件有Bug从而让系统误认为是Text文件了，其实这并不是这样的，因为他是静态模板文件，这就意味着文件中的`标签`外区域是大量的纯文本输出内容，因此不适宜提供代码提示，你可以手动唤醒他们`Ctrl + J`或者`Ctrl + Space`。至于为什么可以通过插件做这种拒绝弹出提示的操作，而在设置中无法做到，就不得而知了，所以我觉得Webstorm其实也挺混乱的。
 
-* Chrome自带的HMR只支持Javascript和CSS两种，就是说在Webstorm里修改Javascript或者scss模板都能直接在Chrome里响应（如果基于Chrome的HMR，虽然它也可能随时需要再激活一次）。但是如果要连同Html一起更新则需要Live Edit，但是Webstorm自带的Synchronization功能又有一定的问题，如果修改模板文件，它并不能自动的检测到`_site`文件夹的变动并同步给Chrome里的插件。这个时候可以使用手动快捷键`Ctrl+Alt+Y`或者将鼠标单击到别的应用程序窗口再
-回到Webstorm再或者将`_site`下的文件一起打开在Editor的一个Tab中。
+* Chrome自带的HMR只支持Javascript和CSS两种，就是说在Webstorm里修改Javascript或者scss模板都能直接在Chrome里响应（如果基于Chrome的HMR，虽然它也可能随时需要再激活一次，但是它确实更精确也更可靠，除了不能热更新Html文件意外）。但是如果要连同Html一起更新则需要Live Edit（对于CSS的刷新有一些文件有用而一些则没响应，所以需要配合Chrome的HMR一起使用，特别是debug选项没有配置的文件。），但是Webstorm自带的Synchronization功能又有一定的问题，如果修改模板文件，它并不能自动的检测到`_site`文件夹的变动并同步给Chrome里的插件。这个时候可以使用手动快捷键`Ctrl+Alt+Y`或者将鼠标单击到别的应用程序窗口再回到Webstorm再或者将`_site`下的文件一起打开在Editor的一个Tab中。
 
 * 很奇怪的，不知道是什么原因，在Webstorm中的文件其实是自动保存的。因为哪怕不点击`Ctrl+S(Save ALL)`一样是可以在VS Code里看到文件的变动的，但是不点击`Save ALL`jekyll的watcher就无法检测到文件的变动。
 
