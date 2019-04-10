@@ -247,8 +247,15 @@
 
 
 //////////////////////////table style and adapts the size//////////////////////////////
+@media screen  and (min-width: 1500px) {
+    .gist-file{
+        max-width: 90%;
+        margin: auto auto 50px;
+    }
+}
+
 .gist-data .Box-body{
-    max-height: 600px;
+    max-height: 800px;
     overflow: auto !important;
 }
 table.not_extern {
