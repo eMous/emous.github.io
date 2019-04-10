@@ -247,9 +247,9 @@
 
 
 //////////////////////////table style and adapts the size//////////////////////////////
-.gist-data{
+.gist-data .Box-body{
     max-height: 600px;
-    overflow: auto;
+    overflow: auto !important;
 }
 table.not_extern {
     // width: 100%;
