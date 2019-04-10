@@ -247,7 +247,11 @@
 
 
 //////////////////////////table style and adapts the size//////////////////////////////
-table {
+.gist-data{
+    max-height: 600px;
+    overflow: auto;
+}
+table.not_extern {
     // width: 100%;
     // max-width: 65em;
     padding: 2px;
@@ -256,16 +260,16 @@ table {
     margin: 15px auto;
     border-collapse: collapse;
 }
-table th,
-table td {
+table.not_extern th,
+table.not_extern td {
   height: 35px;
   border: 1px solid #1f1f20;
   text-align: center !important;
 }
-table th {
+table.not_extern th {
     background: rgba(17, 19, 19, 0.158);
 }
-table tr:nth-child(1), table:nth-child(1) {
+table.not_extern tr:nth-child(1), table.not_extern:nth-child(1) {
     white-space: nowrap;
 }
 .table-area {

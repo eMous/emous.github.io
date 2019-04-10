@@ -56,9 +56,9 @@
   var demoItems = document.querySelectorAll('.grid-item')
 }());
 
-//////////////////////////table adapts the size//////////////////////////////
+////////////////////////table adapts the size//////////////////////////////
 (function() {
-  [].slice.call(document.querySelectorAll('table')).forEach(function(el){
+  [].slice.call(document.querySelectorAll('table.not_extern')).forEach(function(el){
     var wrapper = document.createElement('div');
     wrapper.className = 'table-area';
     el.parentNode.insertBefore(wrapper, el);

@@ -43,14 +43,68 @@ ___
 
 ----------
 
-|  | WordPress | 博客园 | Blogger |Hexo|Jekyll|
-|----|----|----|----|----|----|
-| <center>需要维护站点</center> | <center style="color:red">✔</center> | <center style="color:green">✖</center> | <center style="color:green">✖</center> | <center style="color:green">✖</center> | <center style="color:green">✖</center> |
-| <center>需要科学上网</center> | <center style="color:green">✖</center> | <center style="color:green">✖</center> | <center style="color:red">✔</center> | <center style="color:green">✖</center> |<center style="color:green">✖</center> |
-| <center>全样式自定义</center> | <center style="color:green">✔</center> | <center style="color:red">✖</center> | <center style="color:red">✖</center> | <center style="color:green">✔</center> |<center style="color:green">✔</center> |
-| <center><span title="广告、社交关系等" style="text-decoration:underline;">潜在信息侵入</span></center> | <center style="color:green">✖</center> | <center style="color:red">✔</center> | <center style="color:green">✖</center> | <center style="color:green">✖</center> | <center style="color:green">✖</center> |
-| <center><span title="Github Page支持自动生成静态页面" style="text-decoration:underline;">页面自动生成</span></center> |  | |  | <center style="color:red">✖</center> |<center style="color:green">✔</center> |
-| <center>站内编辑博客</center> | <center style="color:green">✔</center> | <center style="color:green">✔</center> | <center style="color:green">✔</center> | <center style="color:red">✖</center> | <center style="color:red">✖</center> |
+<table class="not_extern">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>WordPress</th>
+      <th>博客园</th>
+      <th>Blogger</th>
+      <th>Hexo</th>
+      <th>Jekyll</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center>需要维护站点</center></td>
+      <td><center style="color:red">✔</center></td>
+      <td><center style="color:green">✖</center></td>
+      <td><center style="color:green">✖</center></td>
+      <td><center style="color:green">✖</center></td>
+      <td><center style="color:green">✖</center></td>
+    </tr>
+    <tr>
+      <td><center>需要科学上网</center></td>
+      <td><center style="color:green">✖</center></td>
+      <td><center style="color:green">✖</center></td>
+      <td><center style="color:red">✔</center></td>
+      <td><center style="color:green">✖</center></td>
+      <td><center style="color:green">✖</center></td>
+    </tr>
+    <tr>
+      <td><center>全样式自定义</center></td>
+      <td><center style="color:green">✔</center></td>
+      <td><center style="color:red">✖</center></td>
+      <td><center style="color:red">✖</center></td>
+      <td><center style="color:green">✔</center></td>
+      <td><center style="color:green">✔</center></td>
+    </tr>
+    <tr>
+      <td><center><span title="广告、社交关系等" style="text-decoration:underline;">潜在信息侵入</span></center></td>
+      <td><center style="color:green">✖</center></td>
+      <td><center style="color:red">✔</center></td>
+      <td><center style="color:green">✖</center></td>
+      <td><center style="color:green">✖</center></td>
+      <td><center style="color:green">✖</center></td>
+    </tr>
+    <tr>
+      <td><center><span title="Github Page支持自动生成静态页面" style="text-decoration:underline;">页面自动生成</span></center></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><center style="color:red">✖</center></td>
+      <td><center style="color:green">✔</center></td>
+    </tr>
+    <tr>
+      <td><center>站内编辑博客</center></td>
+      <td><center style="color:green">✔</center></td>
+      <td><center style="color:green">✔</center></td>
+      <td><center style="color:green">✔</center></td>
+      <td><center style="color:red">✖</center></td>
+      <td><center style="color:red">✖</center></td>
+    </tr>
+  </tbody>
+</table>
 
 ----------
 
