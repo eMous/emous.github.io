@@ -24,11 +24,11 @@ VMware Workstation版本：VMware Workstation 12 、VMware Workstation 15
 
 具体问题表现情况：
 
-> 1. 如果客户机是Windows10，一切声音表现正常。
+> 1.如果客户机是Windows10，一切声音表现正常。
 
-> 2. 如果是上述客户及环境，则无法播放声音，在Linux系统中可以查看到相关声卡以及可以拖动相关音量条，但是就是没有声音播放。
+> 2.如果是上述客户及环境，则无法播放声音，在Linux系统中可以查看到相关声卡以及可以拖动相关音量条，但是就是没有声音播放。
 
-> 3. 开机时右下角显示`A device ID has been used that is out of range for your system . . .`(已使用超出系统范围的设备ID ...)。
+> 3.开机时右下角显示`A device ID has been used that is out of range for your system . . .`(已使用超出系统范围的设备ID ...)。
 
 
 ## 解决方案
