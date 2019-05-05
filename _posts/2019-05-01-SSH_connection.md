@@ -1,9 +1,9 @@
 ---
-id: 2019-05-02-VimTabs.md
+id: 2019-05-01-SSH_connection.md
 author: Anon
 layout: post
 title: 重新认识SSH（二）
-date: 2019/5/02
+date: 2019/5/01
 categories: SSH
 tags: rfc 网络协议
 description: 使用rfc解读SSH多路复用的原理。
