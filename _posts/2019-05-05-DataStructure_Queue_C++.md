@@ -2,7 +2,7 @@
 id: 2019-05-05-DataStructure_Queue_C++.md
 author: Anon
 layout: post
-title: 数据结构（三）：链队列的C++实现
+title: 数据结构（四）：链队列的C++实现
 date: 2019/5/05
 categories: 数据结构
 tags: C++
