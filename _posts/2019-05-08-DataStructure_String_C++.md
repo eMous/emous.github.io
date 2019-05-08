@@ -3,7 +3,7 @@ id: 2019-05-08-DataStructure_String_C++.md
 author: Anon
 layout: post
 title: 数据结构（五）：串的C++实现
-date: 2019/5/05
+date: 2019/5/08
 categories: 数据结构
 tags: C++
 description: 记录数据结构的学习实践之路，使用C++实现字符串。
