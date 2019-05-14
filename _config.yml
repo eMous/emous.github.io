@@ -84,3 +84,5 @@ demos:
       css: ["css"]
 
 exclude: [".idea/"]
+
+static_data_host: "http://ss.showyoumycode.com/StaticData/Blog"
