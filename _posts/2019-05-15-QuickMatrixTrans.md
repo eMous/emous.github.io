@@ -21,7 +21,8 @@ ___
 
 ## 稀疏矩阵
 
-假设在**m * n**的矩阵中，有**t**个**不为零**的元素。令$\delta$$=$$\frac{t}{m * n}$
+假设在**m * n**的矩阵中，有**t**个**不为零**的元素。令$$\delta=\frac{t}{m*n}$$
 
 When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
