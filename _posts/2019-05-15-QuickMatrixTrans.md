@@ -8,6 +8,7 @@ categories: 算法
 tags: 数据结构
 description: 深入学习算法关于“用空间换时间”的思想。
 editor: Webstorm Typora
+mathjax: true
 ---
 
 * content
@@ -21,3 +22,4 @@ ___
 ## 稀疏矩阵
 
 假设在**m * n**的矩阵中，有**t**个**不为零**的元素。令$\delta$$=$$\frac{t}{m * n}$
+
