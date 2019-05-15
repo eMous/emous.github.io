@@ -126,6 +126,8 @@ Status TransposeSMatrix(TSMatrix before, TSMatrix &after){
    2. 遍历`before.data`中所有的列，配合`num[]`递推出，`before.data`中**每列的第1个非0元素**在`after.data`中的位置`cpot[]`。
 3. 遍历`before.data(tu)`，遇到的每一个元素都**视作它所在列的第一个元素**，根据`cpot[col]`填入`after.data`中，再把`cpot[col]`自增1。
 
+<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/TSMatrix/TSMatrix_fasttrans.gif"></div>
+
 ```c
 Status FastTransposeSMatrix(TSMatrix before, TSMatrix &after){
 	after.mu = before.nu; after.nu = before.mu; after.tu = before.tu;
@@ -160,4 +162,3 @@ Status FastTransposeSMatrix(TSMatrix before, TSMatrix &after){
 ```
 
 综上可以分析出其时间复杂度为$$O(nu + tu)$$ 即 $$O(nu + nu \times mu)$$ 即 $$O(nu \times mu)$$。
-
