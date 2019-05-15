@@ -67,6 +67,7 @@ excerpt_separator: "\n___"
 # paginate
 plugins: 
   - jekyll-paginate
+  - jekyll-seo-tag
 paginate: 6
 
 
