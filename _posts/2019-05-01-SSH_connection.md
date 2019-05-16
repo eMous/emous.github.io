@@ -13,8 +13,7 @@ description: 使用rfc解读SSH多路复用的原理。
 * content
 {:toc}
 
-<div style="text-align: center;"><img style="height:;width:100%;" alt="" title="" src="/image/2019/04/28/Snipaste_2019-04-30_16-24-25.png"></div>
-
+<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/SSH/SSH_logo.png"></div>
 
 在认证完毕后，客户端和服务端之间将使用SSH连接协议进行实际的任务操作，包括**开启交互式的登录会话**、**远程命令调用**、**TCP转发**、**X11转发**等。在传输层协议之上，启用连接协议的方式就是请求一个**service name**为**ssh-connection**服务。
 
