@@ -12,8 +12,7 @@ description: 使用rfc解读SSH多路复用的原理。
 
 * content
 {:toc}
-
-<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/SSH/SSH_logo.png"></div>
+<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/SSH/SSH_logo.png"></div>
 
 在认证完毕后，客户端和服务端之间将使用SSH连接协议进行实际的任务操作，包括**开启交互式的登录会话**、**远程命令调用**、**TCP转发**、**X11转发**等。在传输层协议之上，启用连接协议的方式就是请求一个**service name**为**ssh-connection**服务。
 
@@ -73,7 +72,7 @@ Channel是被`流控`的，在被告知`窗口`可用之前没有数据可以在
 错误码0x00000005 - 0xFDFFFFFF将按照`IETF CONSENSUS`的方式分配，0xFE000000 - 0xFFFFFFFF则留给个人使用。虽然IANA没有关于0xFE000000 - 0xFFFFFFFF的控制权，但是还是将他约定成2部分使用：
 
 - 0xFE000000 - 0xFEFFFFFF被用在本地分配的Channel上，比如channel type为"example_session@example.com"(带有@符号)的Channel打开失败，那么错误码应该使用由IANA分配的部分（ 0x00000001 - 0xFDFFFFFF）或者本地分配相关的部分（0xFE000000 - 0xFEFFFFFF）。
-    
+  
     比如服务器不认识这个channel type，哪怕这个type是本地定义（包含@）的，也必须使用0x00000003错误码。然而如果，服务器认识这个错误码但是无法打开，则应该使用0xFE000000 - 0xFEFFFFFF其中的一个错误码。总的来说，参与者应该首先尝试使用IANA分配的错误码，然后在使用它们自定义的原因。
 
 - 对于从0xFF开始的部分，不做限制或建议。在这个范围内的每一个值，都不被期望有任何实际操作交互性，本质上说它们是为实验目的而预留的。
