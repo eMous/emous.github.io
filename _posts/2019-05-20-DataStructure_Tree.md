@@ -13,7 +13,7 @@ mathjax: true
 
 * content
 {:toc}
-
+树的相关知识。
 
 ___
 
@@ -77,6 +77,14 @@ m棵互不相交的树的集合。对于树中的每一个结点而言，其子�
 
 带权路径长度最小的二叉树。
 
+**相似树**：
+
+形态同，元素值不一定同。
+
+**等价树**：
+
+相似且元素值都相同。
+
 ## 性质
 
 1. 二叉树的第$i$层最多$2^{i-1}$个结点。
@@ -101,6 +109,12 @@ m棵互不相交的树的集合。对于树中的每一个结点而言，其子�
    2. 其余任何结点，父结点为第$\lfloor i/2 \rfloor$。
    3. 若$2i > n $则该结点没有左孩子结点。
    4. 若$2i +1> n $则该结点没有右孩子结点。
+
+6. $n$个叶子结点的正则二叉树一共有$2n-1$个结点。
+
+7. $n$个结点的不相似的二叉树有$\frac{1}{n+1} C_{2 n}^{n}$个。
+
+8. $n$个结点的不相似的树的个数和$n-1$个不相似结点的二叉树的个数相同。
 
 ## 二叉树
 
@@ -525,7 +539,113 @@ int fix_mfset(MFSet &S, int i){
 
 对于第二个原则，则可以正好对应的二叉树是赫夫曼树。
 
-##### s
+##### 赫夫曼编码的实现
 
+因为赫夫曼树是正则二叉树所以n个叶子结点的话，有2n-1个结点。所以存储在一个2n-1长度的数组里，n个叶子结点用来代表n个字符。
 
+1. ```c
+   // 赫夫曼树和赫夫曼编码的存储表示
+   typedef struct{
+       unsigned int weight;
+       unsigned int parent, lchild, rchild;
+   }HTNode, * HuffmanTree; // 赫夫曼树
+   
+   typedef char ** HuffmanCode; // 赫夫曼编码表
+   
+   void HuffmanCoding(HuffmanTree &HT, HuffmanCode &HC, int *w, int n){
+    	// n 为n个字符， w 为每个字符的权值
+       if(n <= 1) return;
+       m = 2 * n - 1;
+       HT = (HuffmanTree)malloc((m + 1) * sizeof(HTNode));	 // 申请空间，因为n是动态的所以动态申请，第0号位不使用
+       
+       for(p = HT, i = 1; i <= n; ++i,++p,++w){
+           // 前n个结点为叶子结点
+           // 初始化叶子结点的权值到对应的字符频率
+           *p = {*w,0,0,0};
+       }
+       for (i = n + 1; i <= m; ++i){
+           // 构建赫夫曼树
+           // 在HT[1..i-1]中选择parent为0且weight最小的两个结点，其序号分别为s1,s2
+           Select(HT,i-1,s1,s2);
+           HT[s1].parent = i; HT[s2].parent = i;
+           HT[i].lchild = s1; HT[i].rchild = s2;
+           HT[i].weight = HT[s1].weight + HT[s2].weight;
+       }
+       
+       // 从叶子到根逆向求每个字符的赫夫曼编码
+       // 分配n个字符编码的头指针向量
+       HC = (HuffmanCode) malloc((n+1)*sizeof(char *));	
+       // 分配求单个字符编码的工作空间（单个字符的 最大 n，并不是最终串长）,并且这个空间可以每个字符循环利用
+       cd = (char *)malloc(n * sizeof(char));
+       cd[n-1] = `\0`;
+       for(i = 1; i <= n; ++i){
+           start = n - 1;
+           for(c = i, f=HT[i].parent; f != 0; c=f,f=HT){
+               // 从叶子结点的上一个结点开始一个一个判断是父结点的左子结点还是右子结点
+               // 然后从串的尾部开始设置
+               if(HT[f].lchild == c) cd[--start] = "0";
+               else cd[--start] = "1";
+           }
+           // 最中单个字符对应的串长确定
+           HC[i] = (char *)mallock((n - start) * sizeof(char));
+           strcpy(HC[i],&cd[start]);
+       }
+       free(cd);
+   }
+   
+   ```
+
+同样也可以从根结点出发求得赫夫曼编码。 不论是从叶子还是从根计算赫夫曼编码，遍历的顺序（选择的字符的顺序）都是 左到底，右，继续做到底，右...。发现的所有叶子结点的顺序。
+
+<div style="text-align: center;"><img style="height:250px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/14.png"></div>
+
+```c
+// 无栈 非递归 遍历赫夫曼树，求赫夫曼编码
+HC = (HuffmanCode)malloc((n + 1) * sizeof(char *));
+// 根据上述的构造 m 一定是根结点
+p = m; cdlen = 0;
+for(i = 1; i <= m; ++i) HT[i].weight = 0; // 初始化每个结点的访问标志
+
+while(p){
+    // 如果这个结点还没有被处理过
+    if(HT[p].weight == 0){
+        // 设置本结点为已经初次处理，先不管到底有没有左子结点
+    	HT[p].weight = 1;
+        // 如果该结点有左子结点，切换待处理结点，且在工作空间补充对应的字符位0
+        if(HT[p].lchild != 0){
+            p = HT[p].lchild; cd[cdlen++] = "0";
+        }
+        else if(HT[p].rchild == 0){
+            // 若它没有左子结点，又没有右子结点，那它必定是叶子结点
+            
+            // 这是的单个字符的赫夫曼码就处理完毕
+            HC[p] = (char *)malloc((cdlen + 1) * sizeof(char));
+            cd[cdlen] = "\0";
+            strcpy(HC[p],cd);
+        }
+    }else if(HT[p].weight == 1){
+        // 如果当前结点已经处理过了 左子结点 
+        
+        // 将其状态位设置为已经处理过了 右子结点，先不管到底有没有右子结点
+        HT[p].weight = 2;
+        if(HT[p].rchild != 0){
+            // 如果它存在右子结点，切换待处理结点，且在工作空间补充对应的字符位1
+      		p = HT[p].rchild;
+            cd[cdlen++] = "1";
+        }else{
+            // 如果待处理结点 已经处理完毕了右子结点
+            
+            // 就让待处理结点回退到上一层（去继续处理右子结点）
+            
+            // 我认为这句置空没有意义，因为不会再回来处理这个结点了，这个结点下的所有结点都处理完毕了，仅仅是设置成和初始化一样的值罢了
+            HT[p].weight = 0;
+            
+            // 待处理接待结点回溯到上一层结点，编码长度减1
+            p = HT[p].parent;
+            --cdlen;
+        }
+        
+    }
+}
+```
 
