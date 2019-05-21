@@ -13,6 +13,8 @@ mathjax: true
 
 * content
 {:toc}
+<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/cover.png"></div>
+
 树的相关知识。
 
 ___
