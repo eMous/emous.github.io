@@ -13,7 +13,7 @@ mathjax: true
 
 * content
 {:toc}
-<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/cover.png"></div>
+<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/cover.png"></div>
 
 树的相关知识。
 
@@ -23,7 +23,7 @@ ___
 
 ## 定义
 
-<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/1.png"></div>
+<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/1.png"></div>
 
 **子树**：
 
@@ -69,7 +69,7 @@ m棵互不相交的树的集合。对于树中的每一个结点而言，其子�
 
 二叉树中的结点和满二叉树的结点一一对应。（结点从左往右一个接一个不空位置。）
 
-<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/2.png"></div>
+<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/2.png"></div>
 
 **正则二叉树**：
 
@@ -130,7 +130,7 @@ typedef TElemType SqBiTree[MAX_TREE_SIZE];	// 0号单元存储根结点
 SqBiTree bt;
 ```
 
-<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/3.png"></div>
+<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/3.png"></div>
 
 把**完全二叉树中的结点编**号和**数组的索引编号**对应。数组中的元素类型需要提供功能以标识元素是否存在（图中以0假定不存在）。
 
@@ -138,7 +138,7 @@ SqBiTree bt;
 
 #### 链式存储
 
-<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/4.png"></div>
+<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/4.png"></div>
 
 链式存储包含两种形式，含有两个指针域的结点结构——二叉链表（只指向孩子结点）和含有三个指针域的结点结构——三叉链表（指向孩子结点和父结点）。
 
@@ -186,7 +186,7 @@ Status PreOrderTraverse(BiTree T, Status(* Visit)(TElemType e)){
 
 则对于表达式$a+b *(c-d)-e / f$，可以得到其对应的二叉树为下图。
 
-<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/5.png"></div>
+<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/5.png"></div>
 
 先序遍历得到序列$-+a * b-c d / e f$（前缀表示，波兰式）。
 
@@ -279,15 +279,15 @@ Status InOrderTravers(BiTree T, Status (* Visit)(TElemType e)){
 
 通过给不存在子结点的结点，提供相关的前驱后继信息（放置于原本为空的指针域）可以加速二叉树的遍历。但是需要额外的提供两个标志域，用于标识该信息的类型是**单纯的子结点**还是用于**表示前驱后继的线索**。其节点结构与标志含义如下图所示：
 
-<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/6.png"></div>
+<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/6.png"></div>
 
-<div style="text-align: center;"><img style="height:100px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/7.png"></div>
+<div style="text-align: center;"><img style="height:100px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/7.png"></div>
 
 **线索化**指对二叉树以某种次序遍历使其变成线索二叉树的过程。下图为一个中序线索链表实例，虚线为线索，实现为实际子结点。
 
-<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/5.png"></div>
+<div style="text-align: center;"><img style="height:200px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/5.png"></div>
 
-<div style="text-align: center;"><img style="height:350px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/8.png"></div>
+<div style="text-align: center;"><img style="height:350px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/8.png"></div>
 
 虽然线索二叉树的遍历过程也是$O(n)$，但其常数因子却比之前的算法的常数因子小得多，并且整个过程不需要使用**栈**。
 
@@ -395,7 +395,7 @@ typedef struct{
 }PTree;
 ```
 
-<div style="text-align: center;"><img style="height:350px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/9.png"></div>
+<div style="text-align: center;"><img style="height:350px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/9.png"></div>
 
 这种结构的好处在于对于特定的结点，可以在常量时间内寻找到父结点。并且反复调用PARENT可以快速的得到根结点。但是求孩子结点的时候却要遍历整个结构。
 
@@ -405,7 +405,7 @@ typedef struct{
 
 多重链表又有两种形式:
 
-<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/10.png"></div>
+<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/10.png"></div>
 
 1. 每个结点的指针个数和树的度相同（方便但浪费空间）
 2. 每个结点的指针个数和该结点的度相同，并标识出该节点的度（节省空间但操作不便）
@@ -430,11 +430,11 @@ typedef struct{
 
 如果在结点处附带父节点信息，同样可以实现父结点的快速查找。
 
-<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/11.png"></div>
+<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/11.png"></div>
 
 ### 森林和二叉树互换
 
-<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/12.png"></div>
+<div style="text-align: center;"><img style="height:;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/12.png"></div>
 
 右子树就是兄弟，左子树就是第一个子树。
 
@@ -537,7 +537,7 @@ int fix_mfset(MFSet &S, int i){
 
 为满足第一个原则，最自然的方法是使用二叉树，将左分支设置为0，又分支设置为1。再约定从上到下组成的串，必定只能映射到一个叶子结点（字符元素）因此不会存在二义性。
 
-<div style="text-align: center;"><img style="height:250px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/13.png"></div>
+<div style="text-align: center;"><img style="height:250px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/13.png"></div>
 
 对于第二个原则，则可以正好对应的二叉树是赫夫曼树。
 
@@ -599,7 +599,7 @@ int fix_mfset(MFSet &S, int i){
 
 同样也可以从根结点出发求得赫夫曼编码。 不论是从叶子还是从根计算赫夫曼编码，遍历的顺序（选择的字符的顺序）都是 左到底，右，继续做到底，右...。发现的所有叶子结点的顺序。
 
-<div style="text-align: center;"><img style="height:250px;width:;" alt="" title="" src="http://ss.showyoumycode.com/StaticData/Blog/Tree/14.png"></div>
+<div style="text-align: center;"><img style="height:250px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/Tree/14.png"></div>
 
 ```c
 // 无栈 非递归 遍历赫夫曼树，求赫夫曼编码
