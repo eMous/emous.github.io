@@ -28,8 +28,8 @@ mathjax: false
 CoordMode, Mouse, Screen
 x := 1350
 y := 765
-waitTime := 1800
-waitTime1 := 700
+waitTime := 3500
+waitTime1 := 800
 
 Run C:\Program Files (x86)\Tencent\TIM\Bin\QQScLauncher.exe
 WinWait, TIM
