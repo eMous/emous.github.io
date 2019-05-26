@@ -25,53 +25,56 @@ mathjax: false
     C:\Users\你的用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 ## 脚本
 ```
-Sleep, 2000
+CoordMode, Mouse, Screen
+x := 1350
+y := 765
+waitTime := 1800
+waitTime1 := 700
+
 Run C:\Program Files (x86)\Tencent\TIM\Bin\QQScLauncher.exe
 WinWait, TIM
-WinActivate, TIM
-MouseMove,350,350
+Sleep,waitTime1
+MouseMove,x,y
 Click, 2
 Click, 2
 Click, 2
 Click, 2
 Send 7670{Tab}{Enter}
 
-
+Sleep,waitTime
 Run C:\Program Files (x86)\Tencent\TIM\Bin\QQScLauncher.exe
 WinWait, TIM
-Sleep,500
-WinWaitActive, TIM
-MouseMove,350,350
+Sleep,waitTime1
+MouseMove,x,y
 Click, 2
 Click, 2
 Click, 2
 Click, 2
 Send 9760{Tab}{Enter}
 
+Sleep,waitTime
 Run C:\Program Files (x86)\Tencent\TIM\Bin\QQScLauncher.exe
 WinWait, TIM
-Sleep,500
-WinWaitActive, TIM
-MouseMove,350,350
+Sleep,waitTime1
+MouseMove,x,y
 Click, 2
 Click, 2
 Click, 2
 Click, 2
 Send 4835{Tab}{Enter}
 
-
+Sleep,waitTime
 Run C:\Program Files (x86)\Tencent\TIM\Bin\QQScLauncher.exe
 WinWait, TIM
-Sleep,500
-WinWaitActive, TIM
-MouseMove,350,350
+Sleep,waitTime1
+MouseMove,x,y
 Click, 2
 Click, 2
 Click, 2
 Click, 2
 Send 1531{Tab}{Enter}
 
-Sleep,1000
+Sleep,500
 Loop{
 	WinGet, OutPutVar, Count, TIM
 	if (OutPutVar == 5){
@@ -85,6 +88,7 @@ Loop {
 		Break
 	}
 }   
+
 ```
 
 ___
