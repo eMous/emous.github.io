@@ -27,7 +27,9 @@ ___
 4. 将脚本（或者快捷方式）移动到Startup文件夹。
     
     C:\Users\你的用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+    
 ## 脚本
+
 <script src="https://gist.github.com/eMous/70df9702975595be8fa46e2761be2945.js"></script>
 
 
