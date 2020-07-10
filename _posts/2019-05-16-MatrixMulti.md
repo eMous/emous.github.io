@@ -85,7 +85,7 @@ for (i = 1; i < m1; ++i){
 
 4. 虽然$$M$$和$$N$$都是稀疏矩阵，但是结果未必是稀疏矩阵。同时，$$Q$$的元素是否是非零元只有在累加完毕后才能得知。**由于$$Q$$中元素的行号和$$M$$中元素的行号一致，且$$M$$中元素的排列是以M的行序为主序的**，所以对$$Q$$进行计算的时候可以对$$Q$$进行逐行处理，先求得中间结果（**$$Q$$的一行**），再压缩到`Q.data`中去。 
 
-<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/RLSMatrix/RLSMatrix_multi.gif"></div>
+<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="https://ss.caihuashuai.com/StaticData/Blog/RLSMatrix/RLSMatrix_multi.gif"></div>
 
 具体思路如下：
 

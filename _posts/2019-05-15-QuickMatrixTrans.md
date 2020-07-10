@@ -63,7 +63,7 @@ typedef union{
 2. 将`data`中每个`Triple`的`i`和`j`互换。
 3. 重新整理`data`使其满足**行主序**。**（难以实现）**
 
-<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/TSMatrix/TS_Trans.png"></div>
+<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="https://ss.caihuashuai.com/StaticData/Blog/TSMatrix/TS_Trans.png"></div>
 
 ## 普通算法
 
@@ -71,7 +71,7 @@ typedef union{
 
 对于具体的某一列，**遍历所有的非零元素**，判断每个元素的列值是否等于当前列。又因为，`data`是按照**行值排列**的，可以确保在`after.data`中的每**行**元素也一定可以按照**列值**从小到大排列。
 
-<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/TSMatrix/TSMatrix_trans_normal.gif"></div>
+<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="https://ss.caihuashuai.com/StaticData/Blog/TSMatrix/TSMatrix_trans_normal.gif"></div>
 
 ```c
 Status TransposeSMatrix(TSMatrix before, TSMatrix &after){
@@ -126,7 +126,7 @@ Status TransposeSMatrix(TSMatrix before, TSMatrix &after){
    2. 遍历`before.data`中所有的列，配合`num[]`递推出，`before.data`中**每列的第1个非0元素**在`after.data`中的位置`cpot[]`。
 3. 遍历`before.data(tu)`，遇到的每一个元素都**视作它所在列的第一个元素**，根据`cpot[col]`填入`after.data`中，再把`cpot[col]`自增1。
 
-<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="https://ss.showyoumycode.com/StaticData/Blog/TSMatrix/TSMatrix_fasttrans.gif"></div>
+<div style="text-align: center;"><img style="height:400px;width:;" alt="" title="" src="https://ss.caihuashuai.com/StaticData/Blog/TSMatrix/TSMatrix_fasttrans.gif"></div>
 
 ```c
 Status FastTransposeSMatrix(TSMatrix before, TSMatrix &after){
